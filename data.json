@@ -9,22 +9,50 @@
         "time": 15,
         "summary": {
             "image": "images/sample.png",
-            "overview": "こんなやつ",
-            "condition": "3回アウトになったら脱落"
+            "overview": "こんなやつ"
         },
         "sections": [
             {
-                "title": "基本ルール",
+                "type": "accordion",
+                "title": "ゲームの流れ",
                 "content": "..."
             },
             {
-                "title": "補足",
+                "type": "modal",
+                "title": "Q&A",
                 "content": "..."
             }
+        ]
+    },
+    {
+        "id": "dance",
+        "name": "犯人は踊る",
+        "players": [
+            2,
+            10
         ],
-        "modal": {
-            "description": "詳細説明"
-        }
+        "time": 15,
+        "summary": {
+            "image": "images/sample.png",
+            "overview": "ババ抜き風陣営ゲーム！"
+        },
+        "sections": [
+            {
+                "type": "accordion",
+                "title": "ゲームの流れ",
+                "content": "..."
+            },
+            {
+                "type": "modal",
+                "title": "Q&A",
+                "content": "調整中..."
+            },
+            {
+                "type": "accordion",
+                "title": "人数別カード枚数",
+                "content": "4人･･･\n5人･･･"
+            }
+        ]
     },
     {
         "id": "b",
@@ -36,21 +64,19 @@
         "time": 90,
         "summary": {
             "image": "images/sample.png",
-            "overview": "ざっくり説明",
-            "condition": "条件など"
+            "overview": "ざっくり説明"
         },
         "sections": [
             {
+                "type": "modal",
                 "title": "基本ルール",
                 "content": "..."
             },
             {
-                "title": "補足",
+                "type": "modal",
+                "title": "Q&A",
                 "content": "..."
             }
-        ],
-        "modal": {
-            "description": "詳細説明"
-        }
+        ]
     }
 ]

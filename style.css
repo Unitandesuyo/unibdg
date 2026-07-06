@@ -246,6 +246,33 @@ body {
     transform: rotate(-1deg);
 }
 
+.section-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+
+    border: 2px solid #dadada;
+
+    background: #ffffff;
+
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+.section-ac-content {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.3s ease;
+
+    background: #fff;
+}
+
 /*背景*/
 .background {
     background-size: 50px 50px;
@@ -275,4 +302,9 @@ body {
     /*PC向け
     background-size: 40px 40px;
     background-position: 0 0, 20px 20px;*/
+}
+
+/*改行*/
+.section-content {
+    white-space: pre-line;
 }

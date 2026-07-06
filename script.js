@@ -26,17 +26,28 @@ function renderList() {
                 : `${game.players[0]}〜${game.players[1]}人`;
 
         const sectionsHtml = game.sections
-            .map(section => `
-                <div class="item">
-                    <div class="balloon">
-                        ${section.title}
-                    </div>
-
-                    <div class="desc">
-                        ${section.content}
-                    </div>
-                </div>
-            `)
+            .map(section => {
+                if (section.type === "modal") {
+                    return `
+                        <div class="section-item" onclick="openSectionModal('${game.id}', '${section.title}')">
+                            <span>${section.title}</span>
+                        </div>
+                    `;
+                }
+                if (section.type === "accordion") {
+                    return `
+                        <div class="section-item section-accordion">
+                            ${section.title}
+                        </div>
+                        <div class="section-ac-content">
+                            <div class="inner section-content">
+                                ${section.content}
+                            </div>
+                        </div>
+                    `;
+                }
+                return "";
+            })
             .join("");
 
         const html = `
@@ -78,21 +89,7 @@ function renderList() {
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="balloon">
-                            条件
-                        </div>
-
-                        <div class="desc">
-                            ${game.summary.condition}
-                        </div>
-                    </div>
-
                     ${sectionsHtml}
-
-                    <a href="#" onclick="openModal('${game.id}'); return false;">
-                        詳細を見る
-                    </a>
 
                 </div>
             </div>
@@ -102,6 +99,7 @@ function renderList() {
     });
 
     setupAccordion();
+    setupSectionAccordion();
 }
 
 // アコーディオン
@@ -159,6 +157,70 @@ function closeModal() {
 
     document.getElementById("modal").style.display =
         "none";
+
+}
+
+//アコーディオン内のモーダル
+function openSectionModal(gameId, sectionTitle) {
+
+    const game =
+        data.find(g => g.id === gameId);
+
+    if (!game) return;
+
+    const section =
+        game.sections.find(
+            s => s.title === sectionTitle
+        );
+
+    if (!section) return;
+
+    document.getElementById("modal").style.display =
+        "block";
+
+    document.getElementById("modal-title").textContent =
+        section.title;
+
+    document.getElementById("modal-description").textContent =
+        section.content;
+}
+
+//子アコーディオンの開閉処理
+function setupSectionAccordion() {
+
+    const accordions =
+        document.querySelectorAll(".section-accordion");
+
+    accordions.forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            const content =
+                item.nextElementSibling;
+
+            if (content.style.maxHeight) {
+
+                content.style.maxHeight = null;
+
+            } else {
+
+                content.style.maxHeight =
+                    content.scrollHeight + "px";
+
+            }
+
+            requestAnimationFrame(() => {
+
+                const parentContent =
+                    item.closest(".content");
+
+
+                parentContent.style.maxHeight = "9999px";
+            });
+
+        });
+
+    });
 
 }
 
