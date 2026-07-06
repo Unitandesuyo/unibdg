@@ -1,0 +1,264 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+    text-align: center;
+}
+
+.background {
+    background-size: 50px 50px;
+    /* マスの大きさ */
+    background-image:
+        linear-gradient(to right, #84cc93 1px, transparent 1px),
+        linear-gradient(to bottom, #84cc93 1px, transparent 1px);
+    background-color: #dbffd6;
+    /* ベースの背景色 */
+}
+
+.bg_pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3fcf3;
+    z-index: -1;
+}
+
+.Polka_v2 {
+    background-image: radial-gradient(#9edba8 2px, transparent 2px), radial-gradient(#9edba8 2px, #ffffff 2px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+
+.container {
+    max-width: 800px;
+    /* ← 横幅制限 */
+    margin: 0 auto;
+    /* ← 中央に寄せる */
+    padding: 0 10px;
+    /* ← スマホ余白 */
+}
+
+
+
+/* アコーディオン */
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    /* 左右に分ける */
+    align-items: center;
+    background-color: #eef8e8;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 2px solid #43a04f;
+    border-radius: 10px;
+}
+
+.summary-area {
+    display: flex;
+    gap: 20px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+/* 開いているとき */
+.accordion.open {
+    border-radius: 10px 10px 0 0;
+}
+
+.game-image {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 10px;
+}
+
+.acc-left {
+    font-size: 20px;
+    /* タイトル大きく */
+    font-weight: bold;
+    text-align: left;
+}
+
+.acc-right {
+    text-align: right;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fcfcfc;
+
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+
+    border-radius: 0 0 10px 10px;
+}
+
+.accordion.open+.content {
+    border-left: 2px solid #43a04f;
+    border-right: 2px solid #43a04f;
+    border-bottom: 2px solid #43a04f;
+}
+
+.inner {
+    padding: 10px;
+}
+
+.summary-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.summary-image img {
+    border-radius: 8px;
+}
+
+.summary-text {
+    flex: 1;
+}
+
+.summary-info {
+    flex: 1;
+    text-align: left;
+}
+
+.sub-accordion {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+
+    text-align: left;
+    cursor: pointer;
+
+    border: 1px solid #43a04f;
+    background: #eef8e8;
+}
+
+.sub-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* モーダル */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    width: 90%;
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: none;
+    border: none;
+    padding: 0;
+
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #f00;
+}
+
+/* アイテム全体 */
+.item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+/* 左：タグ */
+.summary-balloon {
+    position: relative;
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-right: 10px;
+
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+
+    background: #fadf44;
+    border-radius: 16px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* しっぽ */
+.balloon::after {
+    content: "";
+    position: absolute;
+
+    bottom: -4px;
+    right: -6px;
+
+    border: 8px solid transparent;
+    border-left: 8px solid #fadf44;
+
+    transform: rotate(45deg);
+}
+
+
+/* 右：説明 */
+.desc {
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+    z-index: 0;
+}
+
+.summary-desc {
+    margin-top: 12px;
+    position: relative;
+    z-index: 0;
+}
+
+/* マーカー風 */
+.desc::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 8px;
+    background: yellow;
+    opacity: 0.4;
+    z-index: -1;
+    transform: rotate(-1deg);
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>作成中</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg_pattern Polka_v2">
+    <div class="container">
+        <h2>一覧</h2>
+
+        <!-- 検索（あとで使う） -->
+        <input type="text" id="search" placeholder="ゲームタイトル">
+
+        <!-- 一覧表示 -->
+        <div id="list"></div>
+
+
+
+
+        <!-- モーダル -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+
+                <!-- ルール -->
+                <div id="rules-section"></div>
+
+                <!-- Q&A -->
+                <div id="qa-section"></div>
+
+                <!-- その他 -->
+                <div id="extra-section"></div>
+
+                <!-- リンク -->
+                <div id="link-section"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

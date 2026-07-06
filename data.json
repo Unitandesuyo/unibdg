@@ -1,0 +1,56 @@
+[
+    {
+        "id": "a",
+        "name": "あ",
+        "players": [
+            3,
+            4
+        ],
+        "time": 90,
+        "summary": {
+            "image": "images/sample.png",
+            "overview": "ざっくり説明",
+            "condition": "条件など"
+        },
+        "sections": [
+            {
+                "title": "基本ルール",
+                "content": "..."
+            },
+            {
+                "title": "補足",
+                "content": "..."
+            }
+        ],
+        "modal": {
+            "description": "詳細説明"
+        }
+    },
+    {
+        "id": "b",
+        "name": "い",
+        "players": [
+            2,
+            2
+        ],
+        "time": 90,
+        "summary": {
+            "image": "images/sample.png",
+            "overview": "ざっくり説明",
+            "condition": "条件など"
+        },
+        "sections": [
+            {
+                "title": "基本ルール",
+                "content": "..."
+            },
+            {
+                "title": "補足",
+                "content": "..."
+            }
+        ],
+        "modal": {
+            "description": "詳細説明"
+        }
+    }
+]
