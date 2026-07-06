@@ -1,33 +1,15 @@
+* {
+    outline: 1px solid red;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial;
     padding: 20px;
     text-align: center;
-}
-
-.background {
-    background-size: 50px 50px;
-    /* マスの大きさ */
-    background-image:
-        linear-gradient(to right, #84cc93 1px, transparent 1px),
-        linear-gradient(to bottom, #84cc93 1px, transparent 1px);
-    background-color: #dbffd6;
-    /* ベースの背景色 */
-}
-
-.bg_pattern {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #f3fcf3;
-    z-index: -1;
-}
-
-.Polka_v2 {
-    background-image: radial-gradient(#9edba8 2px, transparent 2px), radial-gradient(#9edba8 2px, #ffffff 2px);
-    background-size: 40px 40px;
-    background-position: 0 0, 20px 20px;
 }
 
 .container {
@@ -35,11 +17,9 @@ body {
     /* ← 横幅制限 */
     margin: 0 auto;
     /* ← 中央に寄せる */
-    padding: 0 10px;
-    /* ← スマホ余白 */
+    padding: 5px;
+    /* スマホ余白 */
 }
-
-
 
 /* アコーディオン */
 .accordion {
@@ -48,7 +28,8 @@ body {
     /* 左右に分ける */
     align-items: center;
     background-color: #eef8e8;
-    padding: 15px;
+    padding: 10px;
+    /*変更*/
     border: none;
     width: 100%;
     cursor: pointer;
@@ -58,10 +39,25 @@ body {
     border-radius: 10px;
 }
 
-.summary-area {
-    display: flex;
-    gap: 20px;
+.acc-left {
+    font-size: 18px;
+    /* タイトル大きく */
+    font-weight: bold;
+    text-align: left;
+    width: 80%;
+
+    flex: 1;
+    min-width: 0;
 }
+
+.acc-right {
+    text-align: right;
+    font-size: 12px;
+    width: 20%;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
 
 .summary-item {
     display: flex;
@@ -76,24 +72,11 @@ body {
 }
 
 .game-image {
-    width: 100%;
-    max-width: 250px;
+    width: 100px;
+    max-width: 100%;
     display: block;
     margin: 0 auto 15px;
     border-radius: 10px;
-}
-
-.acc-left {
-    font-size: 20px;
-    /* タイトル大きく */
-    font-weight: bold;
-    text-align: left;
-}
-
-.acc-right {
-    text-align: right;
-    font-size: 12px;
-    white-space: nowrap;
 }
 
 .content {
@@ -250,7 +233,7 @@ body {
 }
 
 /* マーカー風 */
-.desc::before {
+.summary-desc::before {
     content: "";
     position: absolute;
     left: 0;
@@ -261,4 +244,35 @@ body {
     opacity: 0.4;
     z-index: -1;
     transform: rotate(-1deg);
+}
+
+/*背景*/
+.background {
+    background-size: 50px 50px;
+    /* マスの大きさ */
+    background-image:
+        linear-gradient(to right, #84cc93 1px, transparent 1px),
+        linear-gradient(to bottom, #84cc93 1px, transparent 1px);
+    background-color: #dbffd6;
+    /* ベースの背景色 */
+}
+
+.bg_pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3fcf3;
+    z-index: -1;
+}
+
+.Polka_v2 {
+    background-image: radial-gradient(#9edba8 2px, transparent 2px), radial-gradient(#9edba8 2px, #ffffff 2px);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+
+    /*PC向け
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;*/
 }

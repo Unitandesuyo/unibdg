@@ -1,16 +1,16 @@
 [
     {
         "id": "a",
-        "name": "あ",
+        "name": "コヨーテ",
         "players": [
-            3,
-            4
+            2,
+            10
         ],
-        "time": 90,
+        "time": 15,
         "summary": {
             "image": "images/sample.png",
-            "overview": "ざっくり説明",
-            "condition": "条件など"
+            "overview": "こんなやつ",
+            "condition": "3回アウトになったら脱落"
         },
         "sections": [
             {
@@ -28,10 +28,10 @@
     },
     {
         "id": "b",
-        "name": "い",
+        "name": "えばで",
         "players": [
-            2,
-            2
+            1,
+            4
         ],
         "time": 90,
         "summary": {
