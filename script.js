@@ -39,9 +39,22 @@ function renderList() {
                 if (section.type === "accordion") {
 
                     const contentHtml =
-                        Array.isArray(section.content)
+                        (Array.isArray(section.content)
                             ? section.content.join("<br>")
-                            : section.content;
+                            : section.content)
+                            .replace(
+                                /<heading>(.*?)<\/heading>/g,
+                                '<span class="heading">$1</span>'
+                            )
+                            .replace(
+                                /<note>(.*?)<\/note>/g,
+                                '<span class="note">$1</span>'
+                            )
+                            .replace(
+                                /<warning>(.*?)<\/warning>/g,
+                                '<span class="warning">$1</span>'
+                            );
+
 
                     return `
                         <div class="section-item section-accordion">
