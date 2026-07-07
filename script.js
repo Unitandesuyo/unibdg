@@ -204,11 +204,65 @@ function openSectionModal(gameId, sectionTitle) {
 
     document.getElementById("modal-title").textContent =
         section.title;
+    // FAQ専用レイアウト
+    if (section.modalType === "faq") {
+        const modalHtml =
+            section.content
+                .map(item => `
+            <div class="faq-question">
+                <div class="faq-mark">
+                    Q
+                </div>
+                <div class="faq-text">
+                    ${item.question}
+                </div>
+            </div>
 
-    document.getElementById("modal-description").textContent =
-        Array.isArray(section.content)
-            ? section.content.join("\n")
-            : section.content;
+            <div class="faq-answer">
+                ${item.answer.join("<br>")}
+            </div>
+        `)
+                .join("");
+
+        document.getElementById("modal-description").innerHTML =
+            modalHtml;
+        setupFaqAccordion();
+    }
+
+    else if (
+        Array.isArray(section.content) &&
+        section.content.length > 0 &&
+        typeof section.content[0] === "object"
+    ) {
+
+        const modalHtml =
+            section.content
+                .map(item => `
+                <div class="section-item section-accordion">
+                    ${item.title}
+                </div>
+
+                <div class="section-ac-content">
+                    <div class="inner section-content">
+                        ${item.content.join("<br>")}
+                    </div>
+                </div>
+            `)
+                .join("");
+
+        document.getElementById("modal-description").innerHTML =
+            modalHtml;
+
+        setupSectionAccordion();
+
+    } else {
+
+        document.getElementById("modal-description").innerHTML =
+            Array.isArray(section.content)
+                ? section.content.join("<br>")
+                : section.content;
+
+    }
 }
 
 //子アコーディオンの開閉処理
@@ -243,6 +297,36 @@ function setupSectionAccordion() {
 
                 parentContent.style.maxHeight = "9999px";
             });
+
+        });
+
+    });
+
+}
+
+/*Q&A専用アコーディオン*/
+function setupFaqAccordion() {
+
+    const questions =
+        document.querySelectorAll(".faq-question");
+
+    questions.forEach(question => {
+
+        question.addEventListener("click", () => {
+
+            const answer =
+                question.nextElementSibling;
+
+            if (answer.style.maxHeight) {
+
+                answer.style.maxHeight = null;
+
+            } else {
+
+                answer.style.maxHeight =
+                    answer.scrollHeight + "px";
+
+            }
 
         });
 

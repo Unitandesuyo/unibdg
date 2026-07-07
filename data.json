@@ -35,9 +35,15 @@
                 "title": "特殊カード・処理順",
                 "content": [
                     "<heading>x2</heading>",
+                    "場の数を合計したあと、その数を2倍する",
                     "<heading>MAX→0</heading>",
+                    "場の最大値を0として計算する",
                     "<heading>？</heading>",
-                    "<heading>夜カード</heading>",
+                    "山札を1枚めくり、その数を計算に加える",
+                    "<heading>夜カード(黒い0カード)</heading>",
+                    "0として計算する",
+                    "その後、これまでに公開されたカードも全て山札に戻す",
+                    "",
                     "<heading>処理順</heading>",
                     "？公開 <small>▷</small> MAX→0 <small>▷</small> 全て足す <small>▷</small> x2"
                 ]
@@ -45,7 +51,21 @@
             {
                 "type": "modal",
                 "title": "Q&A",
-                "content": "..."
+                "modalType": "faq",
+                "content": [
+                    {
+                        "question": "コヨーテした数と場の数が同じだったときは？",
+                        "answer": [
+                            "A：コヨーテを宣言した人の負け"
+                        ]
+                    },
+                    {
+                        "question": "MAX→0が出たとき、最大値が複数同時に出ていたら？",
+                        "answer": [
+                            "A：すべてを0にして計算します"
+                        ]
+                    }
+                ]
             }
         ]
     },

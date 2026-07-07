@@ -340,7 +340,7 @@ body::before {
 }
 
 .heading {
-    display: block;
+    /*display: block;*/
     font-size: 16px;
     font-weight: bold;
     color: #43a04f;
@@ -354,4 +354,41 @@ body::before {
 .warning {
     color: #d9534f;
     font-weight: bold;
+}
+
+
+
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #3a3a3a;
+    cursor: pointer;
+}
+
+.faq-mark {
+    flex-shrink: 0;
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 20px;
+    border-right: 1px solid #666;
+    padding-right: 10px;
+}
+
+.faq-text {
+    text-align: left;
+    flex: 1;
+}
+
+.faq-answer {
+    margin-top: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    text-align: left;
+    padding: 0 12px;
 }
