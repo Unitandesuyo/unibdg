@@ -1,4 +1,5 @@
-/* {
+/* テスト用
+ {
     outline: 1px solid red;
 }*/
 
@@ -32,13 +33,14 @@ body {
     background-color: #eef8e8;
     padding: 10px;
     /*変更*/
-    border: none;
     width: 100%;
     cursor: pointer;
-    box-sizing: border-box;
+    /* box-sizing: border-box; 最初に*で宣言しているから不要*/
     margin-top: 5px;
     border: 2px solid #43a04f;
     border-radius: 10px;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .acc-left {
@@ -230,6 +232,7 @@ body {
 
 .summary-desc {
     margin-top: 12px;
+    white-space: pre-line;
     position: relative;
     z-index: 0;
 }
@@ -247,6 +250,7 @@ body {
     z-index: -1;
     transform: rotate(-1deg);
 }
+
 
 .section-item {
     display: flex;
@@ -322,4 +326,6 @@ body::before {
 /*改行*/
 .section-content {
     white-space: pre-line;
+    text-align: left;
+    padding-left: 15px;
 }

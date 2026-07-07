@@ -9,13 +9,18 @@
         "time": 15,
         "summary": {
             "image": "images/sample.png",
-            "overview": "こんなやつ"
+            "overview": "インディアンポーカー\n合計数を推理！"
         },
         "sections": [
             {
                 "type": "accordion",
                 "title": "ゲームの流れ",
-                "content": "..."
+                "content": [
+                    "①１枚ずつカードを配り、自分のカードは見ずに、額に掲げる",
+                    "\n②順番に、１以上の整数を宣言し、数字を大きくしていく",
+                    "\n　※スタートは１でなくてもOK",
+                    "\n　※前の人より小さい数や小数は宣言できない"
+                ]
             },
             {
                 "type": "modal",
