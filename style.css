@@ -1,5 +1,5 @@
 /* テスト用
- {
+* {
     outline: 1px solid red;
 }*/
 
@@ -7,9 +7,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
 body {
     font-family: Arial;
-    padding: 5%;
+    /*padding: 10px clamp(10px, 4vw, 20px);*/
     text-align: center;
 }
 
@@ -76,8 +80,7 @@ body {
 }
 
 .game-image {
-    width: 100px;
-    max-width: 100%;
+    width: 100%;
     display: block;
     margin: 0 auto 15px;
     border-radius: 10px;
@@ -112,8 +115,8 @@ body {
     margin-bottom: 10px;
 }
 
-.summary-image img {
-    border-radius: 8px;
+.summary-image {
+    flex: 4;
 }
 
 .summary-text {
@@ -121,7 +124,7 @@ body {
 }
 
 .summary-info {
-    flex: 1;
+    flex: 6;
     text-align: left;
 }
 
@@ -329,4 +332,9 @@ body::before {
     text-align: left;
     font-size: 13px;
     padding-left: 15px;
+}
+
+.small-text {
+    font-size: 8px;
+    text-align: right;
 }

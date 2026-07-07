@@ -1,3 +1,4 @@
+
 let data = [];
 
 // JSON読込
@@ -25,6 +26,7 @@ function renderList() {
                 ? `${game.players[0]}人`
                 : `${game.players[0]}〜${game.players[1]}人`;
 
+
         const sectionsHtml = game.sections
             .map(section => {
                 if (section.type === "modal") {
@@ -35,13 +37,19 @@ function renderList() {
                     `;
                 }
                 if (section.type === "accordion") {
+
+                    const contentHtml =
+                        Array.isArray(section.content)
+                            ? section.content.join("<br>")
+                            : section.content;
+
                     return `
                         <div class="section-item section-accordion">
                             ${section.title}
                         </div>
                         <div class="section-ac-content">
                             <div class="inner section-content">
-                                ${section.content}
+                                ${contentHtml}
                             </div>
                         </div>
                     `;
@@ -70,11 +78,14 @@ function renderList() {
             <div class="content">
                 <div class="inner">
                     <div class = "summary-area">
-                        <img
-                        src="${game.summary.image}"
-                        alt="${game.name}"
-                        class="game-image"
-                        >
+                        <div class="summary-image">
+                            <img
+                            src="${game.summary.image}"
+                            alt="${game.name}"
+                            class="game-image"
+                            >
+                        </div>
+
                         <div class="summary-info">
 
                             <div class="summary-item">
@@ -182,7 +193,9 @@ function openSectionModal(gameId, sectionTitle) {
         section.title;
 
     document.getElementById("modal-description").textContent =
-        section.content;
+        Array.isArray(section.content)
+            ? section.content.join("\n")
+            : section.content;
 }
 
 //子アコーディオンの開閉処理
