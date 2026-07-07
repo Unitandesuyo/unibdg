@@ -356,6 +356,34 @@ body::before {
     font-weight: bold;
 }
 
+.step {
+    display: inline-block;
+    width: 24px;
+    color: #1f1f1f;
+}
+
+.step-row {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+.step-no {
+    width: 30px;
+    flex-shrink: 0;
+
+    font-weight: bold;
+    color: #43a04f;
+
+    text-align: center;
+}
+
+.step-text {
+    flex: 1;
+
+    text-align: left;
+}
 
 
 

@@ -37,6 +37,45 @@ function renderList() {
                     `;
                 }
                 if (section.type === "accordion") {
+                    if (section.accordionType === "steps") {
+                        // 手順専用レイアウト
+
+                        const contentHtml =
+                            section.content
+                                .map(item => `
+
+                <div class="step-row">
+
+                    <div class="step-no">
+                        ${item.step}
+                    </div>
+
+                    <div class="step-text">
+                        ${item.text.join("<br>")}
+                    </div>
+
+                </div>
+
+            `)
+                                .join("");
+
+                        return `
+        <div class="section-item section-accordion">
+            ${section.title}
+        </div>
+
+        <div class="section-ac-content">
+            <div class="inner section-content">
+                ${contentHtml}
+            </div>
+        </div>
+    `;
+
+                    } else {
+
+                        //ここまでコピペ
+                        // 通常レイアウト
+                    }
 
                     const contentHtml =
                         (Array.isArray(section.content)
@@ -53,6 +92,10 @@ function renderList() {
                             .replace(
                                 /<warning>(.*?)<\/warning>/g,
                                 '<span class="warning">$1</span>'
+                            )
+                            .replace(
+                                /<step>(.*?)<\/step>/g,
+                                '<span class="step">$1</span>'
                             );
 
 
