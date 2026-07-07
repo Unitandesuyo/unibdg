@@ -9,7 +9,7 @@
 
 body {
     font-family: Arial;
-    padding: 20px;
+    padding: 5%;
     text-align: center;
 }
 
@@ -327,5 +327,6 @@ body::before {
 .section-content {
     white-space: pre-line;
     text-align: left;
+    font-size: 13px;
     padding-left: 15px;
 }
