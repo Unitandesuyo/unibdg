@@ -72,8 +72,6 @@ function renderList() {
     `;
 
                     } else {
-
-                        //ここまでコピペ
                         // 通常レイアウト
                     }
 
@@ -146,7 +144,7 @@ function renderList() {
 
                             <div class="summary-item">
                                 <div class="balloon summary-balloon">
-                                    ざっくり
+                                    ざっくりこんなゲーム
                                 </div>
 
                                 <div class="desc summary-desc">
@@ -271,6 +269,32 @@ function openSectionModal(gameId, sectionTitle) {
             modalHtml;
         setupFaqAccordion();
     }
+
+    else if (section.modalType === "detail") {
+        const modalHtml =
+            section.content
+                .map(item => `
+                    <div class="detail-step">
+                        <div class="detail-title">
+                            ${item.title}
+                        </div>
+                            <div class="detail-text">
+                            ${item.text.join("<br>")}
+                        </div>
+                        <img
+                            src="${item.image}"
+                            class="detail-image"
+                        >
+                    </div>
+                `)
+                .join("");
+
+
+        document.getElementById("modal-description").innerHTML =
+            modalHtml;
+    }
+
+
 
     else if (
         Array.isArray(section.content) &&

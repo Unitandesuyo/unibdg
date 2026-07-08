@@ -1,7 +1,7 @@
-/* テスト用
+/* テスト用*/
 * {
     outline: 1px solid red;
-}*/
+}
 
 * {
     box-sizing: border-box;
@@ -160,8 +160,38 @@ body {
     width: 90%;
     max-width: 900px;
     margin: 100px auto;
-    padding: 20px;
     border-radius: 10px;
+
+    /*スクロールするために追加*/
+    max-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: hidden;
+}
+
+.modal-header {
+    background: rgba(255, 255, 255, 0.5);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 5px 5px 15px;
+    border-bottom: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.modal-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#modal-title {
+    margin: 0;
+    font-size: 16px;
 }
 
 .close-btn {
@@ -328,7 +358,9 @@ body::before {
 
 /*改行*/
 .section-content {
-    white-space: pre-line;
+    white-space:
+        /*pre-line;*/
+        nomal;
     text-align: left;
     font-size: 13px;
     padding-left: 15px;
@@ -381,7 +413,6 @@ body::before {
 
 .step-text {
     flex: 1;
-
     text-align: left;
 }
 
@@ -419,4 +450,26 @@ body::before {
     transition: max-height 0.3s ease;
     text-align: left;
     padding: 0 12px;
+}
+
+.detail-step {
+    margin-bottom: 40px;
+}
+
+.detail-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.detail-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.detail-text {
+    text-align: left;
+    line-height: 1.8;
 }

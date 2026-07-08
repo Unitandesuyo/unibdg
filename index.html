@@ -18,17 +18,20 @@
         <!-- 一覧表示 -->
         <div id="list"></div>
 
-
-
-
         <!-- モーダル -->
         <div id="modal" class="modal">
             <div class="modal-content">
 
-                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <div class="modal-header">
 
-                <h3 id="modal-title"></h3>
-                <p id="modal-description"></p>
+                    <h2 id="modal-title"></h2>
+
+                    <button class="close-btn" onclick="closeModal()">&times;</button>
+                </div>
+
+                <div id="modal-description" class="modal-body">
+                </div>
+
 
                 <!-- ルール -->
                 <div id="rules-section"></div>
