@@ -52,6 +52,7 @@ function renderList() {
                     return `
                         <div class="section-item" onclick="openSectionModal('${game.id}', '${section.title}')">
                             <span>${section.title}</span>
+                            <span class="modal-icon">→</span>
                         </div>
                     `;
                 }
@@ -80,7 +81,8 @@ function renderList() {
 
                         return `
         <div class="section-item section-accordion">
-            ${section.title}
+            <span>${section.title}</span>
+            <span class="accordion-icon">></span>
         </div>
 
         <div class="section-ac-content">
@@ -118,7 +120,9 @@ function renderList() {
 
                     return `
                         <div class="section-item section-accordion">
-                            ${section.title}
+                            <span>${section.title}</span>
+                            <span class="accordion-icon">></span>
+
                         </div>
                         <div class="section-ac-content">
                             <div class="inner section-content">
@@ -424,6 +428,7 @@ function setupFaqAccordion() {
     });
 
 }
+
 
 // 初期表示
 loadData();

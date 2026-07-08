@@ -1,0 +1,129 @@
+    {
+        "id": "timebomb",
+        "name": "タイムボム",
+        "players": [
+            2,
+            8
+        ],
+        "time": 30,
+        "summary": {
+            "image": "images/sample.png",
+            "overview": "誰が味方か分からない！\n目指せ爆弾解除(阻止)！",
+            "memo": "ザ・正体隠匿系　喧嘩勃発"
+        },
+        "sections": [
+            {
+                "type": "accordion",
+                "title": "勝利条件",
+                "content": [
+                    "<heading>時空警察陣営</heading>",
+                    "全ての【解除】カードをオープンする",
+                    "<heading>ボマー陣営</heading>",
+                    "・【BOMB】カードをオープン",
+                    "・ラウンド終了までに全ての【解除】カードがオープンされていない"
+                ]
+            },
+            {
+                "type": "accordion",
+                "accordionType": "steps",
+                "title": "ゲームの流れ",
+                "content": [
+                    {
+                        "step": "",
+                        "text": [
+                            "<small>※２人の場合は「２人の場合」を参照</small>"
+                        ]
+                    },
+                    {
+                        "step": "①",
+                        "text": [
+                            "陣営カードを1枚ずつ配り、陣営を確認。"
+                        ]
+                    },
+                    {
+                        "step": "②",
+                        "text": [
+                            "導線カードを5枚ずつ配り、表を確認。",
+                            "シャッフルして自分の前に裏向きで置く。"
+                        ]
+                    },
+                    {
+                        "step": "③",
+                        "text": [
+                            "ニッパーを持っている人が自分以外の導線カードを1枚オープン。",
+                            "カードをめくられた人にニッパーが渡る。"
+                        ]
+                    },
+                    {
+                        "step": "④",
+                        "text": [
+                            "プレイ人数分だけ導線カードが空いたら１ラウンド終了。",
+                            "裏向きの導線カードを回収・シャッフルし、次は1人4枚。",
+                            "（表になった導線カードは除けておく）"
+                        ]
+                    },
+                    {
+                        "step": "⑤",
+                        "text": [
+                            "これを4ラウンド(導線カードが1人2枚になるまで)続ける。",
+                            "【BOMB】カードがオープンになってしまったら、ラウンド途中でもゲーム終了。"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "詳しい流れ",
+                "modalType": "detail",
+                "content": [
+                    {
+                        "title": "",
+                        "image": "images/sample.png",
+                        "text": [
+                            ""
+                        ]
+                    },
+                    {
+                        "title": "",
+                        "image": "images/sample2.png",
+                        "text": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "accordion",
+                "title": "人数別カード枚数",
+                "content": [
+                    "<heading>陣営カード</heading>",
+                    "8人：【ボマー】n人、【警察】m人",
+                    "",
+                    "",
+                    "<heading>導線カード（人数×5枚）</heading>",
+                    "8人：【BOMB】1枚、【解除】8枚、【しーん】31枚",
+                    ""
+                ]
+            },
+            {
+                "type": "accordion",
+                "title": "【スパイ】カード",
+                "content": [
+                    ""
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "Q&A",
+                "modalType": "faq",
+                "content": [
+                    {
+                        "question": "",
+                        "answer": [
+                            ""
+                        ]
+                    }
+                ]
+            }
+        ]
+    }

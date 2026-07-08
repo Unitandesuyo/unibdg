@@ -39,7 +39,6 @@ body {
     /*変更*/
     width: 100%;
     cursor: pointer;
-    /* box-sizing: border-box; 最初に*で宣言しているから不要*/
     margin-top: 5px;
     border: 2px solid #43a04f;
     border-radius: 10px;
@@ -49,7 +48,6 @@ body {
 
 .acc-left {
     font-size: 18px;
-    /* タイトル大きく */
     font-weight: bold;
     text-align: left;
     width: 80%;
@@ -210,6 +208,18 @@ body {
 
 .close-btn:hover {
     color: #f00;
+}
+
+.modal-icon {
+    color: #888;
+    transform: rotate(-45deg);
+    font-size: 14px;
+}
+
+.accordion-icon {
+    color: #888;
+    transform: rotate(90deg);
+    font-size: 14px;
 }
 
 /* アイテム全体 */

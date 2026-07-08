@@ -10,5 +10,13 @@
     {
         "id": "hanninisdance",
         "file": "data/bdg/hanninisdance.json"
+    },
+    {
+        "id": "penguinparty",
+        "file": "data/bdg/penguinparty.json"
+    },
+    {
+        "id": "timebomb",
+        "file": "data/bdg/timebomb.json"
     }
 ]
