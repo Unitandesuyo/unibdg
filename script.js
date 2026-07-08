@@ -4,8 +4,27 @@ let data = [];
 // JSON読込
 async function loadData() {
     try {
-        const response = await fetch("data.json");
-        data = await response.json();
+        const listResponse =
+            await fetch("data/list.json");
+
+        const gameList =
+            await listResponse.json();
+
+        const games =
+            await Promise.all(
+
+                gameList.map(async game => {
+
+                    const response =
+                        await fetch(game.file);
+
+                    return await response.json();
+
+                })
+
+            );
+
+        data = games;
 
         renderList();
     } catch (error) {
@@ -143,14 +162,15 @@ function renderList() {
                         <div class="summary-info">
 
                             <div class="summary-item">
-                                <div class="balloon summary-balloon">
+                                <div class="summary-balloon">
                                     ざっくりこんなゲーム
                                 </div>
 
-                                <div class="desc summary-desc">
-                                    ${game.summary.overview}
+                                <div class="desc summary-desc">${game.summary.overview}</div>
                                 </div>
-                            </div>
+                                <div class="summary-memo">
+                                    ${game.summary.memo}
+                                </div>
                         </div>
                     </div>
 
@@ -251,16 +271,20 @@ function openSectionModal(gameId, sectionTitle) {
             section.content
                 .map(item => `
             <div class="faq-question">
-                <div class="faq-mark">
+                <div class="faq-question-mark">
                     Q
                 </div>
-                <div class="faq-text">
+                <div class="faq-question-text">
                     ${item.question}
                 </div>
             </div>
-
             <div class="faq-answer">
-                ${item.answer.join("<br>")}
+                <div class="faq-answer-mark">
+                    A
+                </div>
+                <div class="faq-answer-text">
+                    ${item.answer.join("<br>")}
+                </div>
             </div>
         `)
                 .join("");
