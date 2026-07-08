@@ -1,0 +1,14 @@
+[
+    {
+        "id": "coyote",
+        "file": "data/bdg/coyote.json"
+    },
+    {
+        "id": "fogsite",
+        "file": "data/bdg/fogsite.json"
+    },
+    {
+        "id": "hanninisdance",
+        "file": "data/bdg/hanninisdance.json"
+    }
+]
