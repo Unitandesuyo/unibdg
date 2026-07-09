@@ -18,5 +18,9 @@
     {
         "id": "timebomb",
         "file": "data/bdg/timebomb.json"
+    },
+    {
+        "id": "saboteur",
+        "file": "data/bdg/saboteur.json"
     }
 ]

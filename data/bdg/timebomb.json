@@ -6,6 +6,10 @@
             8
         ],
         "time": 30,
+        "tags": [
+            "正体隠匿系",
+            "協力"
+        ],
         "summary": {
             "image": "images/sample.png",
             "overview": "誰が味方か分からない！\n目指せ爆弾解除(阻止)！",

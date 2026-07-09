@@ -6,6 +6,10 @@
             1
         ],
         "time": 999,
+        "tags": [
+            "",
+            ""
+        ],
         "summary": {
             "image": "images/sample.png",
             "overview": "ざっくりこんなゲーム",

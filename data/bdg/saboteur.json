@@ -1,27 +1,27 @@
     {
-        "id": "penguinparty",
-        "name": "ペンギンパーティ",
+        "id": "saboteur",
+        "name": "お邪魔者",
         "players": [
-            2,
-            6
+            1,
+            1
         ],
-        "time": 40,
+        "time": 999,
         "tags": [
-            "思考",
-            "ライト"
+            "正体隠匿系",
+            "協力"
         ],
         "summary": {
             "image": "images/sample.png",
-            "overview": "協力！？妨害！？\n同じ色のペンギンを繋げよう",
-            "memo": "七ならべ的な"
+            "overview": "ざっくりこんなゲーム",
+            "memo": ""
         },
         "sections": [
             {
                 "type": "accordion",
-                "title": "勝利条件",
+                "title": "",
                 "content": [
-                    "人数分ラウンド終了後、",
-                    "シャチチップが一番少ない人が勝利"
+                    "",
+                    ""
                 ]
             },
             {

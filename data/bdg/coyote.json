@@ -6,6 +6,10 @@
             10
         ],
         "time": 15,
+        "tags": [
+            "ワイワイ",
+            "推理"
+        ],
         "summary": {
             "image": "images/sample.png",
             "overview": "自分の数字が見えない状態で\n合計を読みあうブラフゲーム",

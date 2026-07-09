@@ -10,19 +10,26 @@ async function loadData() {
         const gameList =
             await listResponse.json();
 
-        const games =
-            await Promise.all(
+        const games = [];
+        //jsonファイルを1つずつ読み込み
+        for (const game of gameList) {
+            try {
+                const response =
+                    await fetch(game.file);
 
-                gameList.map(async game => {
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
 
-                    const response =
-                        await fetch(game.file);
+                const json =
+                    await response.json();
 
-                    return await response.json();
+                games.push(json);
 
-                })
-
-            );
+            } catch (error) {
+                console.error(`${game.file}の読み込み失敗`, error);
+            }
+        }
 
         data = games;
 
@@ -44,6 +51,15 @@ function renderList() {
             game.players[0] === game.players[1]
                 ? `${game.players[0]}人`
                 : `${game.players[0]}〜${game.players[1]}人`;
+
+        const tagsHtml =
+            (game.tags || [])
+                .map(tag => `
+            <span class="game-tag">
+                ${tag}
+            </span>
+        `)
+                .join("");
 
 
         const sectionsHtml = game.sections
@@ -142,12 +158,12 @@ function renderList() {
                 </div>
 
                 <div class="acc-right">
-                    <div>
-                        ${playerText}
+                    <div class="game-basic">
+                        ${playerText}・${game.time}分
                     </div>
 
-                    <div>
-                        ${game.time}分
+                    <div class="game-tags">
+                    ${tagsHtml}
                     </div>
                 </div>
             </button>

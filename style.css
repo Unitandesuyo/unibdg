@@ -1,7 +1,7 @@
-/* テスト用
+/* テスト用*/
 * {
     outline: 1px solid red;
-}*/
+}
 
 * {
     box-sizing: border-box;
@@ -30,7 +30,8 @@ body {
 /* アコーディオン */
 .accordion {
     color: #000;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 140px;
     justify-content: space-between;
     /* 左右に分ける */
     align-items: center;
@@ -50,7 +51,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     text-align: left;
-    width: 80%;
+    width: auto;
 
     flex: 1;
     min-width: 0;
@@ -59,7 +60,8 @@ body {
 .acc-right {
     text-align: right;
     font-size: 12px;
-    width: 20%;
+    flex: none;
+    width: auto;
     white-space: nowrap;
     flex-shrink: 0;
 }
@@ -234,19 +236,27 @@ body {
 .summary-balloon {
     position: relative;
     display: inline-block;
-
-    padding: 6px 12px;
-
-    margin-right: 10px;
-
     font-size: 12px;
     font-weight: bold;
+    line-height: 1;
     color: #fff;
 
-    background: #089413;
-    border-radius: 16px;
-
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: #094;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.summary-balloon::after {
+    position: absolute;
+    bottom: -5px;
+    left: 1em;
+    width: 0;
+    height: 0;
+    content: '';
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: #094 transparent transparent transparent;
 }
 
 
@@ -492,4 +502,25 @@ body::before {
 .detail-text {
     text-align: left;
     line-height: 1.8;
+}
+
+.game-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: flex-end;
+    margin-top: 4px;
+}
+
+.game-tag {
+    padding: 2px 8px;
+    background: linear-gradient(135deg,
+            hsl(96, 55%, 53%),
+            hsl(122, 62%, 36%));
+    color: white;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    border-radius: 999px;
 }
