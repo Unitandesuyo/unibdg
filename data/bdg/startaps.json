@@ -1,18 +1,20 @@
     {
-        "id": "pokemongoita",
-        "name": "ポケモンごいた",
+        "id": "startaps",
+        "name": "STARTAPS",
+        "subtitle": "スタータップス",
         "players": [
-            4,
-            4
+            3,
+            7
         ],
-        "time": 15,
+        "time": 20,
         "tags": [
-            "協力"
+            "駆け引き",
+            "ブラフ"
         ],
         "summary": {
             "image": "images/sample.png",
-            "overview": "仲間と協力して点数稼ぎ！",
-            "memo": "2vs2のタッグ戦"
+            "overview": "価値が上がる企業を見極めろ！\n株式投資テーマのカードゲーム！",
+            "memo": ""
         },
         "sections": [
             {
