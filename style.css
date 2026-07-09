@@ -50,6 +50,7 @@ body {
 .acc-left {
     font-size: 18px;
     font-weight: bold;
+    font-family: "ヒラギノ角ゴ Pro W3", "Arial";
     text-align: left;
     width: auto;
 
@@ -64,6 +65,19 @@ body {
     width: auto;
     white-space: nowrap;
     flex-shrink: 0;
+}
+
+.game-subtitle {
+    display: inline-block;
+
+    margin-left: 6px;
+    padding-left: 6px;
+
+    border-left: 1px solid #28422b;
+
+    font-size: 11px;
+    font-weight: bold;
+    color: #415545;
 }
 
 
@@ -375,7 +389,7 @@ body::before {
 .section-content {
     white-space:
         /*pre-line;*/
-        nomal;
+        normal;
     text-align: left;
     font-size: 13px;
     padding-left: 15px;
@@ -483,6 +497,7 @@ body::before {
 }
 
 .detail-step {
+    white-space: normal;
     margin-bottom: 40px;
 }
 
@@ -494,7 +509,7 @@ body::before {
 }
 
 .detail-image {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
     margin-bottom: 10px;
 }

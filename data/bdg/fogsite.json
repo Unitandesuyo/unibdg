@@ -1,6 +1,7 @@
     {
         "id": "fogsite",
-        "name": "FOGSITE(ﾌｫｸﾞｻｲﾄ)",
+        "name": "FOGSITE",
+        "subtitle": "フォグサイト",
         "players": [
             2,
             4

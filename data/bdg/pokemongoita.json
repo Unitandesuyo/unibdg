@@ -1,20 +1,19 @@
     {
-        "id": "",
-        "name": "ゲームタイトル",
-        "subtitle": "",
+        "id": "pokemongoita",
+        "name": "ポケモンごいた",
         "players": [
-            1,
-            1
+            4,
+            4
         ],
-        "time": 999,
+        "time": 15,
         "tags": [
-            "",
-            ""
+            "思考",
+            "協力"
         ],
         "summary": {
             "image": "images/sample.png",
-            "overview": "ざっくりこんなゲーム",
-            "memo": ""
+            "overview": "仲間と協力して点数稼ぎ！",
+            "memo": "2vs2のタッグ戦"
         },
         "sections": [
             {

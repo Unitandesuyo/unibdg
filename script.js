@@ -155,6 +155,10 @@ function renderList() {
             <button class="accordion">
                 <div class="acc-left">
                     ${game.name}
+                    ${game.subtitle
+                ? `<div class="game-subtitle">${game.subtitle}</div>`
+                : ""}
+                    
                 </div>
 
                 <div class="acc-right">
@@ -239,29 +243,13 @@ function setupAccordion() {
 
 }
 
-// モーダル表示
-function openModal(id) {
-
-    const game =
-        data.find(g => g.id === id);
-
-    if (!game) return;
-
-    document.getElementById("modal").style.display =
-        "block";
-
-    document.getElementById("modal-title").textContent =
-        game.name;
-
-    document.getElementById("modal-description").textContent =
-        game.modal.description;
-}
-
 // モーダル閉じる
 function closeModal() {
 
     document.getElementById("modal").style.display =
         "none";
+
+    document.body.style.overflow = "";
 
 }
 
@@ -282,6 +270,8 @@ function openSectionModal(gameId, sectionTitle) {
 
     document.getElementById("modal").style.display =
         "block";
+
+    document.body.style.overflow = "hidden";
 
     document.getElementById("modal-title").textContent =
         section.title;
@@ -406,7 +396,9 @@ function setupSectionAccordion() {
                     item.closest(".content");
 
 
-                parentContent.style.maxHeight = "9999px";
+                if (parentContent) {
+                    parentContent.style.maxHeight = "9999px";
+                }
             });
 
         });

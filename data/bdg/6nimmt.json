@@ -1,20 +1,20 @@
     {
-        "id": "",
-        "name": "ゲームタイトル",
-        "subtitle": "",
+        "id": "6nimmt",
+        "name": "6 Nimmt!",
+        "subtitle": "ニムト",
         "players": [
-            1,
-            1
+            2,
+            10
         ],
-        "time": 999,
+        "time": 20,
         "tags": [
-            "",
-            ""
+            "ワイワイ",
+            "戦略"
         ],
         "summary": {
-            "image": "images/sample.png",
-            "overview": "ざっくりこんなゲーム",
-            "memo": ""
+            "image": "images/construction.png",
+            "overview": "牛が'少ない'人が勝ち！\n",
+            "memo": "なんで牛なんだろう"
         },
         "sections": [
             {
@@ -72,9 +72,9 @@
                 "modalType": "faq",
                 "content": [
                     {
-                        "question": "",
+                        "question": "なんで牛なの？",
                         "answer": [
-                            ""
+                            "ドイツでは牛は「馬鹿」や「のろま」の象徴とされているらしい。かわいそう牛くん。"
                         ]
                     }
                 ]
