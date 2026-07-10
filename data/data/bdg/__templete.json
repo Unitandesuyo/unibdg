@@ -1,0 +1,92 @@
+    {
+        "id": "",
+        "name": "ゲームタイトル",
+        "subtitle": "",
+        "players": [
+            1,
+            1
+        ],
+        "time": 999,
+        "tags": [
+            "",
+            ""
+        ],
+        "summary": {
+            "image": "images/sample.png",
+            "overview": "ざっくりこんなゲーム",
+            "memo": ""
+        },
+        "sections": [
+            {
+                "type": "accordion",
+                "title": "",
+                "content": [
+                    "",
+                    ""
+                ]
+            },
+            {
+                "type": "accordion",
+                "accordionType": "steps",
+                "title": "ゲームの流れ",
+                "content": [
+                    {
+                        "step": "",
+                        "text": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "",
+                "content": [
+                    ""
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "詳しい流れ",
+                "modalType": "detail",
+                "content": [
+                    {
+                        "title": "",
+                        "layout": [
+                            {
+                                "type": "text",
+                                "fontSize": "",
+                                "content": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "",
+                        "layout": [
+                            {
+                                "type": "",
+                                "content": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "Q&A",
+                "modalType": "faq",
+                "content": [
+                    {
+                        "question": "",
+                        "answer": [
+                            ""
+                        ]
+                    }
+                ]
+            }
+        ]
+    }

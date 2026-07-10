@@ -1,0 +1,149 @@
+    {
+        "id": "saboteur",
+        "name": "お邪魔者",
+        "players": [
+            3,
+            10
+        ],
+        "time": 30,
+        "tags": [
+            "正体隠匿",
+            "協力"
+        ],
+        "summary": {
+            "image": "images/sample.png",
+            "overview": "ざっくりこんなゲーム",
+            "memo": ""
+        },
+        "sections": [
+            {
+                "type": "accordion",
+                "title": "勝利条件",
+                "content": [
+                    "<heading>金鉱堀り</heading>",
+                    "　金塊カードまで坑道をつなげる。",
+                    "<heading>お邪魔者</heading>",
+                    "金塊へ到達させずに、山札を0にする。",
+                    "",
+                    "ラウンド終了時、勝利陣営のみが金塊カードを獲得できる。",
+                    "3ラウンド終了時に最も多く金塊を持っている人の優勝。"
+                ]
+            },
+            {
+                "type": "accordion",
+                "title": "ストーリー",
+                "content": [
+                    "あなたはは金鉱を目指すドワーフです。",
+                    "しかし、その中には坑道を妨害し、宝にたどり着けないよう企むお邪魔者が紛れています。",
+                    "正体は最後まで秘密のまま。",
+                    "協力して道をつなぐのか、それとも妨害するのか……心理戦が楽しめるゲームです。"
+                ]
+            },
+            {
+                "type": "accordion",
+                "accordionType": "steps",
+                "title": "ゲームの流れ",
+                "content": [
+                    {
+                        "step": "①",
+                        "text": [
+                            "役職カード、手札を配る"
+                        ]
+                    },
+                    {
+                        "step": "②",
+                        "text": [
+                            "自分の番でカードを1枚プレイ",
+                            "山札から1枚引いて手札に加える"
+                        ]
+                    },
+                    {
+                        "step": "",
+                        "text": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "",
+                "content": [
+                    ""
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "詳しい流れ",
+                "modalType": "detail",
+                "content": [
+                    {
+                        "title": "タイトル",
+                        "layout": [
+                            {
+                                "type": "text",
+                                "content": [
+                                    "準備",
+                                    "こういう状態になります。"
+                                ]
+                            },
+                            {
+                                "type": "row",
+                                "items": [
+                                    {
+                                        "type": "image",
+                                        "src": "images/sample.png",
+                                        "caption": "キャプション"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "タイトル",
+                        "layout": [
+                            {
+                                "type": "row",
+                                "items": [
+                                    {
+                                        "type": "image",
+                                        "src": "images/sample.png",
+                                        "width": "20%",
+                                        "caption": "①"
+                                    },
+                                    {
+                                        "type": "image",
+                                        "src": "images/sample2.png",
+                                        "size": "small",
+                                        "width": "20%",
+                                        "caption": "②"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "width": "60%",
+                                        "fontSize": "8px",
+                                        "content": [
+                                            "こういう状態になります。"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "Q&A",
+                "modalType": "faq",
+                "content": [
+                    {
+                        "question": "",
+                        "answer": [
+                            ""
+                        ]
+                    }
+                ]
+            }
+        ]
+    }

@@ -1,0 +1,42 @@
+[
+    {
+        "id": "saboteur",
+        "file": "data/bdg/saboteur.json"
+    },
+    {
+        "id": "coyote",
+        "file": "data/bdg/coyote.json"
+    },
+    {
+        "id": "startaps",
+        "file": "data/bdg/startaps.json"
+    },
+    {
+        "id": "timebomb",
+        "file": "data/bdg/timebomb.json"
+    },
+    {
+        "id": "6nimmt",
+        "file": "data/bdg/6nimmt.json"
+    },
+    {
+        "id": "hanninisdance",
+        "file": "data/bdg/hanninisdance.json"
+    },
+    {
+        "id": "fogsite",
+        "file": "data/bdg/fogsite.json"
+    },
+    {
+        "id": "hellapagos",
+        "file": "data/bdg/hellapagos.json"
+    },
+    {
+        "id": "penguinparty",
+        "file": "data/bdg/penguinparty.json"
+    },
+    {
+        "id": "pokemongoita",
+        "file": "data/bdg/pokemongoita.json"
+    }
+]

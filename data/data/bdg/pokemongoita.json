@@ -1,0 +1,81 @@
+    {
+        "id": "pokemongoita",
+        "name": "ポケモンごいた",
+        "players": [
+            4,
+            4
+        ],
+        "time": 15,
+        "tags": [
+            "協力"
+        ],
+        "summary": {
+            "image": "images/sample.png",
+            "overview": "仲間と協力して点数稼ぎ！",
+            "memo": "2vs2のタッグ戦"
+        },
+        "sections": [
+            {
+                "type": "accordion",
+                "title": "",
+                "content": [
+                    "",
+                    ""
+                ]
+            },
+            {
+                "type": "accordion",
+                "accordionType": "steps",
+                "title": "ゲームの流れ",
+                "content": [
+                    {
+                        "step": "",
+                        "text": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "",
+                "content": [
+                    ""
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "詳しい流れ",
+                "modalType": "detail",
+                "content": [
+                    {
+                        "title": "",
+                        "image": "images/sample.png",
+                        "text": [
+                            ""
+                        ]
+                    },
+                    {
+                        "title": "",
+                        "image": "images/sample2.png",
+                        "text": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "modal",
+                "title": "Q&A",
+                "modalType": "faq",
+                "content": [
+                    {
+                        "question": "",
+                        "answer": [
+                            ""
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
