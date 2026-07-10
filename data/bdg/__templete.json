@@ -52,16 +52,25 @@
                 "content": [
                     {
                         "title": "",
-                        "image": "images/sample.png",
-                        "text": [
-                            ""
+                        "layout": [
+                            {
+                                "type": "text",
+                                "fontSize": "",
+                                "content": [
+                                    ""
+                                ]
+                            }
                         ]
                     },
                     {
                         "title": "",
-                        "image": "images/sample2.png",
-                        "text": [
-                            ""
+                        "layout": [
+                            {
+                                "type": "",
+                                "content": [
+                                    ""
+                                ]
+                            }
                         ]
                     }
                 ]

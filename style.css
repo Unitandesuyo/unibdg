@@ -1,7 +1,7 @@
-/* テスト用
+/* テスト用*/
 * {
     outline: 1px solid red;
-}*/
+}
 
 * {
     box-sizing: border-box;
@@ -508,11 +508,6 @@ body::before {
     margin-bottom: 10px;
 }
 
-.detail-image {
-    width: 80%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
 
 .detail-text {
     text-align: left;
@@ -538,4 +533,63 @@ body::before {
     font-weight: bold;
 
     border-radius: 999px;
+}
+
+/* detail全体 */
+
+.detail-step {
+    white-space: normal;
+    margin-bottom: 40px;
+}
+
+.detail-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.detail-text {
+    text-align: left;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+.detail-figure {
+    width: 80%;
+    margin: 16px 0;
+}
+
+.detail-step>.detail-figure .detail-image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detail-image {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+
+.detail-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.detail-caption {
+    font-size: 11px;
+    color: #777;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.marker {
+    background: linear-gradient(transparent 60%,
+            #fff29d 60%);
 }

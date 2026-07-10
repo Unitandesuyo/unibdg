@@ -28,6 +28,10 @@
         "file": "data/bdg/fogsite.json"
     },
     {
+        "id": "hellapagos",
+        "file": "data/bdg/hellapagos.json"
+    },
+    {
         "id": "penguinparty",
         "file": "data/bdg/penguinparty.json"
     },

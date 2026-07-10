@@ -1,14 +1,15 @@
     {
-        "id": "saboteur",
-        "name": "お邪魔者",
+        "id": "",
+        "name": "ゲームタイトル",
+        "subtitle": "",
         "players": [
             1,
             1
         ],
         "time": 999,
         "tags": [
-            "正体隠匿系",
-            "協力"
+            "",
+            ""
         ],
         "summary": {
             "image": "images/sample.png",
@@ -50,52 +51,46 @@
                 "modalType": "detail",
                 "content": [
                     {
-                        "title": "タイトル",
+                        "title": "",
                         "layout": [
                             {
                                 "type": "text",
                                 "content": [
-                                    "準備",
-                                    "こういう状態になります。"
+                                    "文章"
                                 ]
                             },
                             {
-                                "type": "row",
-                                "items": [
-                                    {
-                                        "type": "image",
-                                        "src": "images/sample.png",
-                                        "caption": "キャプション"
-                                    }
-                                ]
+                                "type": "image",
+                                "src": "images/sample.png",
+                                "caption": "キャプション"
                             }
                         ]
                     },
                     {
-                        "title": "タイトル",
+                        "title": "",
                         "layout": [
                             {
                                 "type": "row",
                                 "items": [
                                     {
                                         "type": "image",
-                                        "src": "images/sample.png",
-                                        "width": "20%",
+                                        "src": "images/construction.png",
+                                        "width": "50%",
                                         "caption": "①"
                                     },
                                     {
                                         "type": "image",
-                                        "src": "images/sample2.png",
-                                        "size": "small",
-                                        "width": "20%",
-                                        "caption": "②"
+                                        "width": "50%",
+                                        "src": "images/sample.png"
                                     },
                                     {
                                         "type": "text",
-                                        "width": "60%",
-                                        "fontSize": "8px",
+                                        "fontSize": "",
+                                        "width": "40%",
                                         "content": [
-                                            "こういう状態になります。"
+                                            "widthは無指定だと100%",
+                                            "キャプションはなしでもいい",
+                                            "fontsizeは無指定16px"
                                         ]
                                     }
                                 ]

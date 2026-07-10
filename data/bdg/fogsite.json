@@ -112,17 +112,12 @@
                 "modalType": "detail",
                 "content": [
                     {
-                        "title": "タイトル１",
-                        "image": "images/sample.png",
-                        "text": [
-                            "調整中"
-                        ]
-                    },
-                    {
-                        "title": "タイトル２",
-                        "image": "images/sample2.png",
-                        "text": [
-                            "調整中"
+                        "title": "",
+                        "layout": [
+                            {
+                                "type": "text",
+                                "content": []
+                            }
                         ]
                     }
                 ]

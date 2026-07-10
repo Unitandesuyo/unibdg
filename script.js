@@ -39,6 +39,37 @@ async function loadData() {
     }
 }
 
+//テキスト装飾
+function parseText(text) {
+
+    return text
+        .replace(
+            /<b>(.*?)<\/b>/g,
+            "<strong>$1</strong>"
+        )
+        .replace(
+            /<mark>(.*?)<\/mark>/g,
+            '<span class="marker">$1</span>'
+        )
+        .replace(
+            /<note>(.*?)<\/note>/g,
+            '<span class="note">$1</span>'
+        )
+        .replace(
+            /<warning>(.*?)<\/warning>/g,
+            '<span class="warning">$1</span>'
+        )
+        .replace(
+            /<heading>(.*?)<\/heading>/g,
+            '<span class="heading">$1</span>'
+        )
+        .replace(
+            /<step>(.*?)<\/step>/g,
+            '<span class="step">$1</span>'
+        );
+
+}
+
 // 一覧表示
 function renderList() {
     const list = document.getElementById("list");
@@ -111,27 +142,12 @@ function renderList() {
                     } else {
                         // 通常レイアウト
                     }
-
                     const contentHtml =
-                        (Array.isArray(section.content)
-                            ? section.content.join("<br>")
-                            : section.content)
-                            .replace(
-                                /<heading>(.*?)<\/heading>/g,
-                                '<span class="heading">$1</span>'
-                            )
-                            .replace(
-                                /<note>(.*?)<\/note>/g,
-                                '<span class="note">$1</span>'
-                            )
-                            .replace(
-                                /<warning>(.*?)<\/warning>/g,
-                                '<span class="warning">$1</span>'
-                            )
-                            .replace(
-                                /<step>(.*?)<\/step>/g,
-                                '<span class="step">$1</span>'
-                            );
+                        parseText(
+                            Array.isArray(section.content)
+                                ? section.content.join("<br>")
+                                : section.content
+                        );
 
 
                     return `
@@ -253,6 +269,57 @@ function closeModal() {
 
 }
 
+//モーダル内の要素
+// モーダル内の要素
+function renderDetailItem(item) {
+
+    // テキスト
+    if (item.type === "text") {
+
+        return `
+            <div class="detail-text" style="font-size:${item.fontSize || '15px'}; width:${item.width || '100%'};">
+                ${parseText(
+            item.content.join("<br>")
+        )}
+            </div>
+        `;
+    }
+
+    // 画像
+    if (item.type === "image") {
+
+        return `
+            <figure class="detail-figure" style="width:${item.width || '80%'};
+            margin-left:${item.width ? '0' : 'auto'}; margin-right:${item.width ? '0' : 'auto'};">
+
+            <img src="${item.src}" class="detail-image">
+            ${item.caption
+                ? `
+                <figcaption class="detail-caption">
+                   ${item.caption}
+                </figcaption>
+            `
+                : ""
+            }
+
+            </figure>
+        `;
+    }
+
+    // 横並び
+    if (item.type === "row") {
+
+        return `
+            <div class="detail-row">
+                ${item.items
+                .map(renderDetailItem)
+                .join("")}
+            </div>
+        `;
+    }
+
+    return "";
+}
 //アコーディオン内のモーダル
 function openSectionModal(gameId, sectionTitle) {
 
@@ -305,29 +372,40 @@ function openSectionModal(gameId, sectionTitle) {
     }
 
     else if (section.modalType === "detail") {
-        const modalHtml =
-            section.content
-                .map(item => `
-                    <div class="detail-step">
-                        <div class="detail-title">
-                            ${item.title}
-                        </div>
-                            <div class="detail-text">
-                            ${item.text.join("<br>")}
-                        </div>
-                        <img
-                            src="${item.image}"
-                            class="detail-image"
-                        >
-                    </div>
-                `)
-                .join("");
 
+        const modalHtml =
+
+            section.content
+                .map(block => {
+
+                    const layoutHtml =
+                        block.layout
+                            .map(renderDetailItem)
+                            .join("");
+
+                    return `
+                    <div class="detail-step">
+
+                        ${block.title
+                            ? `
+                                <div class="detail-title">
+                                    ${block.title}
+                                </div>
+                              `
+                            : ""
+                        }
+
+                        ${layoutHtml}
+
+                    </div>
+                `;
+
+                })
+                .join("");
 
         document.getElementById("modal-description").innerHTML =
             modalHtml;
     }
-
 
 
     else if (
@@ -436,6 +514,7 @@ function setupFaqAccordion() {
     });
 
 }
+
 
 
 // 初期表示
