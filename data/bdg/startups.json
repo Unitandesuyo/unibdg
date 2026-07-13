@@ -1,27 +1,28 @@
     {
-        "id": "penguinparty",
-        "name": "ペンギンパーティ",
+        "id": "startups",
+        "name": "STARTUPS",
+        "subtitle": "スタータップス",
         "players": [
-            2,
-            6
+            3,
+            7
         ],
-        "time": 40,
+        "time": 20,
         "tags": [
             "駆け引き",
-            "初心者向け"
+            "ブラフ"
         ],
         "summary": {
             "image": "images/sample.png",
-            "overview": "協力！？妨害！？\n同じ色のペンギンを繋げよう",
-            "memo": "七ならべ的な"
+            "overview": "価値が上がる企業を見極めろ！\n株式投資テーマのカードゲーム！",
+            "memo": "独占禁止法も適用！"
         },
         "sections": [
             {
                 "type": "accordion",
                 "title": "勝利条件",
                 "content": [
-                    "人数分ラウンド終了後、",
-                    "シャチチップが一番少ない人が勝利"
+                    "",
+                    ""
                 ]
             },
             {

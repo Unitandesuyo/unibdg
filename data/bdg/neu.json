@@ -1,27 +1,28 @@
     {
-        "id": "penguinparty",
-        "name": "ペンギンパーティ",
+        "id": "neu",
+        "name": "neu",
+        "subtitle": "ノイ",
         "players": [
-            2,
-            6
+            1,
+            1
         ],
-        "time": 40,
+        "time": 999,
         "tags": [
-            "駆け引き",
-            "初心者向け"
+            "",
+            ""
         ],
         "summary": {
             "image": "images/sample.png",
-            "overview": "協力！？妨害！？\n同じ色のペンギンを繋げよう",
-            "memo": "七ならべ的な"
+            "overview": "足し算していくUNO！",
+            "memo": "引き忘れに注意！"
         },
         "sections": [
             {
                 "type": "accordion",
-                "title": "勝利条件",
+                "title": "",
                 "content": [
-                    "人数分ラウンド終了後、",
-                    "シャチチップが一番少ない人が勝利"
+                    "",
+                    ""
                 ]
             },
             {
@@ -51,16 +52,25 @@
                 "content": [
                     {
                         "title": "",
-                        "image": "images/sample.png",
-                        "text": [
-                            ""
+                        "layout": [
+                            {
+                                "type": "text",
+                                "fontSize": "",
+                                "content": [
+                                    ""
+                                ]
+                            }
                         ]
                     },
                     {
                         "title": "",
-                        "image": "images/sample2.png",
-                        "text": [
-                            ""
+                        "layout": [
+                            {
+                                "type": "",
+                                "content": [
+                                    ""
+                                ]
+                            }
                         ]
                     }
                 ]
