@@ -290,7 +290,7 @@ body {
     z-index: 0;
 }
 
-/* マーカー風 */
+/* マーカー風 
 .summary-desc::before {
     content: "";
     position: absolute;
@@ -302,7 +302,7 @@ body {
     opacity: 0.4;
     z-index: -1;
     transform: rotate(-1deg);
-}
+}*/
 
 .summary-memo {
     display: inline-block;
@@ -593,4 +593,34 @@ body::before {
 .marker {
     background: linear-gradient(transparent 60%,
             #fff29d 60%);
+}
+
+.detail-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.detail-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.detail-table th {
+    background: #444;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.detail-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+}
+
+.detail-table tr:nth-child(even) {
+    background: #f7f7f7;
 }

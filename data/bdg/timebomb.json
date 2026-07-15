@@ -1,6 +1,6 @@
     {
         "id": "timebomb",
-        "name": "タイムボム",
+        "name": "タイムボム(調整中)",
         "players": [
             2,
             8
@@ -81,17 +81,15 @@
                 "modalType": "detail",
                 "content": [
                     {
-                        "title": "",
-                        "image": "images/sample.png",
-                        "text": [
-                            ""
-                        ]
-                    },
-                    {
-                        "title": "",
-                        "image": "images/sample2.png",
-                        "text": [
-                            ""
+                        "title": "タイトル",
+                        "layout": [
+                            {
+                                "type": "text",
+                                "content": [
+                                    "準備",
+                                    "こういう状態になります。"
+                                ]
+                            }
                         ]
                     }
                 ]
@@ -111,7 +109,7 @@
             },
             {
                 "type": "accordion",
-                "title": "【スパイ】カード",
+                "title": "【スパイ】カード(追加役職)",
                 "content": [
                     ""
                 ]

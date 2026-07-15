@@ -318,6 +318,67 @@ function renderDetailItem(item) {
         `;
     }
 
+    // 表
+    if (item.type === "table") {
+
+        const colgroup = item.columnWidths
+            ? `
+            <colgroup>
+                ${item.columnWidths
+                .map(w => `<col style="width:${w};">`)
+                .join("")}
+            </colgroup>
+        `
+            : "";
+
+        const headerHtml = item.headers
+            ? `
+            <tr>
+                ${item.headers
+                .map(h => `
+                        <th
+                            style="
+                                font-size:${item.headerFontSize || '1rem'};
+                            "
+                        >
+                            ${parseText(h)}
+                        </th>
+                    `)
+                .join("")}
+            </tr>
+        `
+            : "";
+
+        const rowsHtml = item.rows
+            .map(row => `
+        <tr>
+            ${row.map((cell, index) => `
+                <td
+                    style="
+                        font-size:${index === 0
+                    ? (item.rowFontSize || item.cellFontSize || '0.9rem')
+                    : (item.cellFontSize || '0.9rem')
+                };
+                    "
+                >
+                    ${parseText(cell)}
+                </td>
+            `).join("")}
+        </tr>
+    `)
+            .join("");
+
+        return `
+        <div class="detail-table-wrap">
+            <table class="detail-table">
+                ${colgroup}
+                ${headerHtml}
+                ${rowsHtml}
+            </table>
+        </div>
+    `;
+    }
+
     return "";
 }
 //アコーディオン内のモーダル

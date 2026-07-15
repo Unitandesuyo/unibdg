@@ -92,6 +92,13 @@
                 ]
             },
             {
+                "type": "accordion",
+                "title": "追加ルール(調整中)",
+                "content": [
+                    "調整中"
+                ]
+            },
+            {
                 "type": "modal",
                 "title": "Q&A",
                 "modalType": "faq",
