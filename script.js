@@ -127,19 +127,43 @@ function renderList() {
                                 .join("");
 
                         return `
-        <div class="section-item section-accordion">
-            <span>${section.title}</span>
-            <span class="accordion-icon">></span>
-        </div>
+                    <div class="section-item section-accordion">
+                        <span>${section.title}</span>
+                        <span class="accordion-icon">></span>
+                    </div>
 
-        <div class="section-ac-content">
-            <div class="inner section-content">
-                ${contentHtml}
-            </div>
-        </div>
-    `;
+                    <div class="section-ac-content">
+                        <div class="inner section-content">
+                            ${contentHtml}
+                        </div>
+                    </div>
+                `;
 
-                    } else {
+                    }
+
+                    if (section.accordionType === "detail") {
+
+                        const contentHtml =
+                            section.content
+                                .map(renderDetailItem)
+                                .join("");
+
+                        return `
+                        <div class="section-item section-accordion">
+                            <span>${section.title}</span>
+                            <span class="accordion-icon">></span>
+                        </div>
+
+                        <div class="section-ac-content">
+                            <div class="inner section-content">
+                                ${contentHtml}
+                            </div>
+                        </div>
+                    `;
+                    }
+
+
+                    else {
                         // 通常レイアウト
                     }
                     const contentHtml =
