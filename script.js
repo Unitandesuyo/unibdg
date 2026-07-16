@@ -408,6 +408,7 @@ function renderDetailItem(item) {
 //アコーディオン内のモーダル
 function openSectionModal(gameId, sectionTitle) {
 
+
     const game =
         data.find(g => g.id === gameId);
 
